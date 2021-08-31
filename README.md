@@ -24,4 +24,4 @@ Dependencias en :
 Para cualquier duda o consulta:
 
 clementeqp@hotmail.com
-Clemente Quintana Pozo
+
