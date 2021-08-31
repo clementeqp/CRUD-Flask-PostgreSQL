@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Personas</title>
+</head>
+<body>
+
+<div>
+    <h1>Sistema de Administracion de Personas</h1>
+
+</div>
+<div>
+    Total de personas: {{total_personas}}
+</div>
+<br/>
+<div>
+    <a href="/agregar">Agregar Persona</a>
+</div>
+<br/>
+<div>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th></th>
+                <th></th>
+                <th></th>
+
+            </tr>
+
+        </thead>
+        <tbody>
+        {% for persona in personas %}
+        <tr>
+            <td>{{ persona.id }}</td>
+            <td>{{ persona.nombre }}</td>
+            <td>{{ persona.apellido }}</td>
+            <td>{{ persona.email }}</td>
+            <td><a href="ver/{{persona.id}}">Ver</a></td>
+            <td><a href="editar/{{persona.id}}">Editar</a></td>
+            <td><a href="borrar/{{persona.id}}">Borrar</a></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+</div>
+<br/><br/>
+<foot>
+    <h3>Clemente Quintana</h3>
+    <p>Desarrollador de Aplicaciones</p>
+
+</foot>
+</body>
+</html>
